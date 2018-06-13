@@ -596,6 +596,8 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithCoder:(NSCoder *)aDecoder)
   if (_onLoadingFinish && !webView.loading && ![webView.URL.absoluteString isEqualToString:@"about:blank"]) {
     _onLoadingFinish([self baseEvent]);
   }
+  [self evaluateJavaScript:@"document.documentElement.style.webkitUserSelect='none'" completionHandler:nil];
+  [self evaluateJavaScript:@"document.documentElement.style.webkitTouchCallout='none'" completionHandler:nil];
 }
 
 #pragma mark - WKUIDelegate
