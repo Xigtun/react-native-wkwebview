@@ -191,7 +191,7 @@ class WKWebView extends React.Component {
      * Receive save image events from view
      * {state: '', msg: ''}
      */
-    onSaveImage: PropTypes.func,
+    onLongPressImage: PropTypes.func,
     /**
      * @platform ios
      */
@@ -356,7 +356,7 @@ class WKWebView extends React.Component {
         onProgress={this._onProgress}
         onMessage={this._onMessage}
         onScroll={this._onScroll}
-        onSaveImage={this._onSaveImage}
+        onLongPressImage={this._onLongPressImage}
         onShouldStartLoadWithRequest={onShouldStartLoadWithRequest}
         pagingEnabled={this.props.pagingEnabled}
         directionalLockEnabled={this.props.directionalLockEnabled}
@@ -512,9 +512,9 @@ class WKWebView extends React.Component {
     onScroll && onScroll(event.nativeEvent);
   };
 
-  _onSaveImage = (event: Event) => {
-    const onSaveImage = this.props.onSaveImage;
-    onSaveImage && onSaveImage(event.nativeEvent);
+  _onLongPressImage = (event: Event) => {
+    const onLongPressImage = this.props.onLongPressImage;
+    onLongPressImage && onLongPressImage(event.nativeEvent);
   };
 }
 
