@@ -75,7 +75,8 @@
     if (_onLongPressImage) {
       _onLongPressImage(@{@"url": imageUrl});
     }
-  }
+   }];
+   }
    
    
    
