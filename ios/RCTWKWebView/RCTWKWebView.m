@@ -76,7 +76,7 @@
       _onLongPressImage(@{@"url": imageUrl});
     }
    }];
-   }
+}
    
    
    
